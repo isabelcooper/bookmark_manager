@@ -3,7 +3,7 @@ require 'sinatra/base'
 class BookMarkApp < Sinatra::Base
 
   get '/' do
-    'Hello World'
+    erb :index
   end
-  
+
 end

@@ -22,7 +22,6 @@ Habakkuk's
 ![](bookmark_manager_1.png)
 
 
-
 Instructions
 ----
 
@@ -43,7 +42,7 @@ admin=# \c bookmark_manager
     --------+-----------+-------+---------------
     public | bookmarks | table | habakkukryong
     (1 row)
-    ```
+```
 
 ## To set up test database:
   run ./db/migrations/02_create_bookmarks_table_test.sql

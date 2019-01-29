@@ -21,7 +21,6 @@ Alex's
 Habakkuk's
 ![](bookmark_manager_1.png)
 
-Isabel & Svilvi
 
 
 Instructions
@@ -38,11 +37,13 @@ admin=# \c bookmark_manager
 4) Check that the table was successfully created:
   \dt
   Expect to see:
+  ```
       List of relations
     Schema |   Name    | Type  |     Owner
     --------+-----------+-------+---------------
     public | bookmarks | table | habakkukryong
     (1 row)
+    ```
 
 ## To set up test database:
   run ./db/migrations/02_create_bookmarks_table_test.sql

@@ -15,7 +15,7 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
 ])
 SimpleCov.start
 
-Capybara.app = BookMarkApp
+Capybara.app = BookmarkApp
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

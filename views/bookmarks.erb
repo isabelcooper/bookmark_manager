@@ -7,13 +7,11 @@
     <h1>Bookmark List</h1>
     <table>
       <tr>
-        <th>Name</th>
         <th>URL</th>
       </tr>
-      <% @bookmarks.each do |row| %>
+      <% @bookmarks.each do |url| %>
         <tr>
-          <td><%= row.first %></td>
-          <td><a href='<%= row.last %>'><%= row.last %></a></td>
+          <td><a href='<%= url %>'><%= url %></a></td>
         </tr>
       <% end %>
     </table>

@@ -1,7 +1,9 @@
-class BookMark
-  attr_reader :all
+require 'pg'
 
-  def initialize
-    @all = [['Wikipedia', 'https://en.wikipedia.org/wiki/Main_Page'], ['Google', 'https://www.google.com']]
+class Bookmark
+  def self.all
+    connection = PG.connect(dbname: 'bookmark_manager')
+    bookmarks = connection.exec ("SELECT * FROM bookmarks")
+    bookmarks.map { |bookmark| bookmark['url'] }
   end
 end

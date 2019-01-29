@@ -1,32 +1,41 @@
 # Bookmark Manager App
 
-Alex's Domain Model for User Story 1:
+User Stories
+----
 
+```
+As a user,
+So I can easily find the pages I like,
+I want the bookmark manager to show a list of bookmarks.
+
+As a time-pressed user
+So that I can save a website
+I would like to add the site's address and title to bookmark manager
+```
+
+Domain Models
+----
+Alex's
 ![](AlexH-UserStory.jpg)
 
-Habakkuk's Domain Model for User Story 1:
-
+Habakkuk's
 ![](bookmark_manager_1.png)
 
-To run app:
+Isabel & Svilvi
 
-Create database named bookmark_manager:
-  createdb bookmark_manager
 
-Connect to database:
-  EITHER:
-    psql bookmark_manager
-  OR:
-    psql
-    \c bookmark_manager
+Instructions
+----
 
-Create table with id and url columns:
-  EITHER:
-    CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));
-  OR:
-    run ./db/migrations/01_create_bookmarks_table.sql
+1) Connect to psql
+2) Create and connect to database:
+```
+admin=# CREATE DATABASE bookmark_manager;
+admin=# \c bookmark_manager
+```
+3) Run query in file 01_create_bookmarks_table.sql
 
-Check that the table was successfully created:
+4) Check that the table was successfully created:
   \dt
   Expect to see:
       List of relations
@@ -35,5 +44,5 @@ Check that the table was successfully created:
     public | bookmarks | table | habakkukryong
     (1 row)
 
-To set up test database:
+## To set up test database:
   run ./db/migrations/02_create_bookmarks_table_test.sql

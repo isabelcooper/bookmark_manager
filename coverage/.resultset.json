@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/habakkukryong/Documents/Makers/Course/week-4/bookmark_manager/spec/bookmark_spec.rb": [
+      "/Users/Isabel/projects/Makers_Month2/bookmark_manager/spec/bookmark_spec.rb": [
         1,
         1,
         null,
@@ -13,7 +13,7 @@
         null,
         null
       ],
-      "/Users/habakkukryong/Documents/Makers/Course/week-4/bookmark_manager/spec/features/bookmarks_page_spec.rb": [
+      "/Users/Isabel/projects/Makers_Month2/bookmark_manager/spec/features/bookmarks_page_spec.rb": [
         1,
         null,
         1,
@@ -24,7 +24,7 @@
         null,
         null
       ],
-      "/Users/habakkukryong/Documents/Makers/Course/week-4/bookmark_manager/spec/features/index_page_spec.rb": [
+      "/Users/Isabel/projects/Makers_Month2/bookmark_manager/spec/features/index_page_spec.rb": [
         1,
         1,
         1,
@@ -40,6 +40,6 @@
         null
       ]
     },
-    "timestamp": 1548782850
+    "timestamp": 1548793402
   }
 }

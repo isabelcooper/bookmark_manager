@@ -34,3 +34,6 @@ Check that the table was successfully created:
     --------+-----------+-------+---------------
     public | bookmarks | table | habakkukryong
     (1 row)
+
+To set up test database:
+  run ./db/migrations/02_create_bookmarks_table_test.sql

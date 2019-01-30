@@ -1,5 +1,5 @@
 def populate_test_db
-  Bookmark.create('http://www.makersacademy.com')
-  Bookmark.create('http://www.destroyallsoftware.com')
-  Bookmark.create('http://www.google.com')
+  Bookmark.create('Makers','http://www.makersacademy.com')
+  Bookmark.create('Destroy','http://www.destroyallsoftware.com')
+  Bookmark.create('Google','http://www.google.com')
 end

@@ -9,9 +9,9 @@
       <tr>
         <th>URL</th>
       </tr>
-      <% @bookmarks.each do |url| %>
+      <% @bookmarks.each do |bookmark| %>
         <tr>
-          <td><a href='<%= url %>'><%= url %></a></td>
+          <td><a href='<%= bookmark.url %>'><%= bookmark.title %></a></td>
         </tr>
       <% end %>
 

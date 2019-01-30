@@ -6,4 +6,13 @@ feature 'shows list of bookmarks' do
     visit '/bookmarks'
     expect(page).to have_link('http://www.destroyallsoftware.com', href: 'http://www.destroyallsoftware.com')
   end
+
+  scenario 'adds new bookmark to database' do
+    populate_test_db
+    visit '/bookmarks'
+    click_on 'Add bookmark'
+    fill_in 'url', with:"www.test.com"
+    click_on 'Save'
+    expect(page). to have_content "www.test.com"
+  end
 end

@@ -11,7 +11,7 @@ feature 'shows list of bookmarks' do
     populate_test_db
     visit '/bookmarks'
     click_on 'Add bookmark'
-    fill_in 'url', with:"www.test.com"
+    fill_in 'url', with:"http://www.test.com"
     click_on 'Save'
     expect(page). to have_content "www.test.com"
   end

@@ -5,18 +5,21 @@
   </head>
   <body>
     <h1>Bookmark List</h1>
-    <table>
-      <tr>
-        <th>URL</th>
-      </tr>
-      <% @bookmarks.each do |bookmark| %>
-        <tr>
-          <td><a href='<%= bookmark.url %>'><%= bookmark.title %></a></td>
-        </tr>
-      <% end %>
 
-    </table>
-    <form action = "/add_bookmark" method = "get" >
+    <h2>URL</h2>
+
+        <ul>
+      <% @bookmarks.each do |bookmark| %>
+          <li class = "bookmark" id = "bookmark-<%bookmark.id%>" >
+            <a href='<%= bookmark.url %>'><%= bookmark.title %></a> <br>
+            <form action = "/bookmarks/<%= bookmark.id %>" method = "get" >
+            <input type = "submit" value = "Delete"></input>
+            </form>
+      <% end %> <br>
+
+
+    <br><br><br>
+    <form action = "/add_bookmark" method="get">
      <input type= "submit" value = "Add bookmark"></input>
     </form>
   </body>

@@ -17,3 +17,16 @@ feature 'shows list of bookmarks' do
     expect(page). to have_content "Test"
   end
 end
+
+feature 'delete bookmarks' do
+  scenario 'book can be deleted from database' do
+    bookmark1 = Bookmark.create("Twitter", "http://www.twitter.com")
+    bookmark2 = Bookmark.create("Two", "http://www.two.com")
+    visit '/bookmarks'
+    first('.bookmark').click_on 'Delete'
+    expect(page).not_to have_content "Twitter"
+  end
+end
+
+
+#Bookmark.delete[bookmark1]

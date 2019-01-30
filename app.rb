@@ -21,4 +21,9 @@ class BookmarkApp < Sinatra::Base
     redirect '/bookmarks'
   end
 
+  get '/bookmarks/:id' do
+    Bookmark.delete(params[:id])
+    redirect '/bookmarks'
+  end
+
 end

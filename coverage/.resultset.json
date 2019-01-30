@@ -33,6 +33,19 @@
         1,
         1,
         null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/Isabel/projects/Makers_Month2/bookmark_manager/spec/features/index_page_spec.rb": [
@@ -51,6 +64,6 @@
         null
       ]
     },
-    "timestamp": 1548863702
+    "timestamp": 1548869516
   }
 }

@@ -17,6 +17,7 @@ class Bookmark
   end
 
   def self.create(title, url)
+    return false unless self.is_url?(url)
     result = DatabaseConnection.query("INSERT INTO bookmarks(title, url) VALUES('#{title}', '#{url}') RETURNING id, title, url;" )
     Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
   end
@@ -32,6 +33,12 @@ class Bookmark
   def self.find(id:)
     result = DatabaseConnection.query("SELECT * FROM bookmarks WHERE id =#{id} ;")[0]
     Bookmark.new(id: result['id'], title: result['title'], url: result['url'])
+  end
+
+  private
+
+  def self.is_url?(url)
+    url =~ /\A#{URI::regexp(['http', 'https'])}\z/
   end
 
 end

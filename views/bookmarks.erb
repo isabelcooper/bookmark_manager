@@ -20,7 +20,12 @@
               <input type = "submit" value = "Update"></input>
             </form>
       <% end %> <br>
-
+      <% flash.keys.each do |type| %>
+        <div data-alert class="flash <%= type %> alert-box radius">
+          <%= flash[type] %>
+          <a href="#" class="close">&times;</a>
+        </div>
+      <% end %>
 
     <br><br><br>
     <form action = "/bookmarks/add" method="get">

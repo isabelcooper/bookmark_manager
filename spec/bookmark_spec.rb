@@ -15,6 +15,12 @@ describe Bookmark do
     expect(Bookmark.all.length).to eq 0
   end
 
+  describe '#create bookmark' do
+    it 'returns false if url is invalid' do
+      expect(Bookmark.create("Title", "broken_url")).to eq false
+    end
+  end
+
   describe '#update' do
     it 'updates bookmark' do
       populate_test_db

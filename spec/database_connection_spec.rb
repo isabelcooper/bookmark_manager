@@ -1,5 +1,3 @@
-require_relative 'setup_test_database'
-
 describe DatabaseConnection do
   let(:pg_double) { double(:pg_double, connect: connection_double) }
   let(:connection_double) { double(:connection_double, exec: "query result") }

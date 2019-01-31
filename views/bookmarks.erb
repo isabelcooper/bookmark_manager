@@ -16,14 +16,14 @@
               <input type='hidden' name='_method' value='DELETE'/>
               <input type = "submit" value = "Delete"></input>
             </form>
-            <form action = "/update_bookmark/<%= bookmark.id %>" method = "get" >
+            <form action = "/bookmarks/<%= bookmark.id %>/edit" method = "get" >
               <input type = "submit" value = "Update"></input>
             </form>
       <% end %> <br>
 
 
     <br><br><br>
-    <form action = "/add_bookmark" method="get">
+    <form action = "/bookmarks/add" method="get">
      <input type= "submit" value = "Add bookmark"></input>
     </form>
   </body>

@@ -33,7 +33,15 @@ describe Bookmark do
       expect(Bookmark.all[-2].url).to eq "http://www.google.com"
       expect(Bookmark.all[-2].title).to eq "Google"
     end
-
-
+  end
+  describe '#find' do
+    it 'finds the bookmark with specified id' do
+      bookmark = Bookmark.create("Makers", "http://www.makers.com")
+      found_bookmark = Bookmark.find(id: bookmark.id)
+      expect(found_bookmark).to be_a Bookmark
+      expect(found_bookmark.id).to eq bookmark.id
+      expect(found_bookmark.title).to eq "Makers"
+      expect(found_bookmark.url).to eq "http://www.makers.com"
+    end
   end
 end

@@ -15,7 +15,7 @@ class BookmarkApp < Sinatra::Base
     erb :bookmarks
   end
 
-  get '/add_bookmark' do
+  get '/bookmarks/add' do
     erb :add_bookmark
   end
 
@@ -29,12 +29,12 @@ class BookmarkApp < Sinatra::Base
     redirect '/bookmarks'
   end
 
-  get '/update_bookmark/:id' do
-    @bookmark = Bookmark.all.select {|bookmark| bookmark.id == params[:id] }.first
+  get '/bookmarks/:id/edit' do
+    @bookmark = Bookmark.find(id: params[:id])
     erb :update_bookmark
   end
 
-  put '/bookmarks/:id' do
+  patch '/bookmarks/:id' do
     Bookmark.update(id: params[:id], title: params[:title], url: params[:url])
     redirect '/bookmarks'
   end

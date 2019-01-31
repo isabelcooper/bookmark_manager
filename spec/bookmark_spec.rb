@@ -8,4 +8,10 @@ describe Bookmark do
     expect(bookmarks[0]).to be_a Bookmark
     expect(bookmarks[0].title).to include("Makers")
   end
+
+  it 'deletes bookmarks' do
+    bookmark = Bookmark.create("title", "http://www.title.com")
+    Bookmark.delete(bookmark.id)
+    expect(Bookmark.all.length).to eq 0
+  end
 end

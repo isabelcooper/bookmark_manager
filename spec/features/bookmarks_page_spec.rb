@@ -27,6 +27,3 @@ feature 'delete bookmarks' do
     expect(page).not_to have_content "Twitter"
   end
 end
-
-
-#Bookmark.delete[bookmark1]

@@ -12,6 +12,12 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
         null
       ],
       "/Users/Isabel/projects/Makers_Month2/bookmark_manager/spec/features/bookmarks_page_spec.rb": [
@@ -43,9 +49,6 @@
         1,
         1,
         null,
-        null,
-        null,
-        null,
         null
       ],
       "/Users/Isabel/projects/Makers_Month2/bookmark_manager/spec/features/index_page_spec.rb": [
@@ -64,6 +67,6 @@
         null
       ]
     },
-    "timestamp": 1548869516
+    "timestamp": 1548933273
   }
 }

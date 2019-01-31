@@ -1,6 +1,10 @@
 require_relative './web_helpers'
 
 feature 'shows list of bookmarks' do
+
+  # before (:each) do
+  #   setup_test_database
+  # end
   scenario 'user visits bookmarks list view' do
     populate_test_db
     visit '/bookmarks'

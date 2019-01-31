@@ -1,7 +1,8 @@
+require_relative '../database_connection_setup'
 require 'pg'
 
-def setup_test_database
-  connection = PG.connect(dbname: 'bookmark_manager_test')
 
-  connection.exec('TRUNCATE bookmarks;')
+def setup_test_database
+  setup
+  DatabaseConnection.query('TRUNCATE bookmarks;')
 end

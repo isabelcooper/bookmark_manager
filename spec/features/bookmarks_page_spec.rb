@@ -27,3 +27,14 @@ feature 'delete bookmarks' do
     expect(page).not_to have_content "Twitter"
   end
 end
+
+feature ' update bookmarks' do
+  scenario 'bookmark can be updated' do
+    populate_test_db
+    visit '/bookmarks'
+    first('.bookmark').click_on 'Update'
+    fill_in 'title', with:"Breakers"
+    click_on 'Submit'
+    expect(page).to have_content 'Breakers'
+  end
+end
